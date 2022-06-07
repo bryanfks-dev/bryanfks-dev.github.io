@@ -51,8 +51,8 @@ const disableDarkMode = () => {
     window.dispatchEvent( new Event('storage') )
 }
 
-// Check if darkMode is enabled from localstorage or dark mode in device is enabled or night time
-if (darkMode === "enabled" || window.matchMedia('(prefers-color-scheme: dark)').matches || new Date().getHours() >= new Date(0, 0, 0, 19).getHours()) {
+// Check if darkMode is enabled from localstorage or dark mode in device is enabled or night time or midnight time
+if (darkMode === "enabled" || window.matchMedia('(prefers-color-scheme: dark)').matches || new Date().getHours() >= new Date(0, 0, 0, 19).getHours() || new Date().getHours() <= new Date(0, 0, 0, 6).getHours()) {
     // Enable dark mode design
     enableDarkMode();
 }
