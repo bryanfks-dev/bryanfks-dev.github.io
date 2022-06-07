@@ -1,0 +1,15 @@
+:root {
+    --primary-color: white;
+    --background: white;
+    --background-nav: rgb(37 99 235);
+    --background-h1: #338FFF;
+    --color-line: black;
+}
+
+.dark {
+    --primary-color: rgb(229 231 235);
+    --background: rgb(30 41 59);
+    --background-nav: rgb(30 58 138);
+    --background-h1: rgb(37 99 235);
+    --color-line: rgb(75 85 99);
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icon.ico">
+    <title>Personal Website | Home</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/navBar.css">
+    <link rel="stylesheet" href="./css/scrollBar.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/darkMode.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="body" id="body">
+    <!-- This is the navigation bar of the page -->
+    <nav class="fixed h-full" id="nav">
+        <ul class="navBarItem mx-3" id="icon">
+            <li class="relative mb-9" id="home">
+                <a href="">
+                    <i class='bx bxs-home text-4xl sm:text-5xl lg:text-6xl text-inherit cursor-pointer'></i>
+                </a>
+                <span class="toolTip">Home</span>
+            </li>
+            <li class="relative mb-9" id="aboutme">
+                <a href="./aboutme/">
+                    <i class='bx bxs-face text-4xl sm:text-5xl lg:text-6xl text-inherit cursor-pointer'></i>
+                </a>
+                <span class="toolTip">About Me</span>
+            </li>
+            <li class="relative mb-9" id="contact">
+                <a href="./contact/">
+                    <i class='bx bxs-contact text-4xl sm:text-5xl lg:text-6xl text-inherit cursor-pointer'></i>
+                </a>
+                <span class="toolTip">Contact</span>
+            <li class="relative" id="info">
+                <a href="./info/">
+                    <i class='bx bx-window-alt text-4xl sm:text-5xl lg:text-6xl text-inherit cursor-pointer'></i>
+                </a>
+                <span class="toolTip">Info</span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- This is the text contents of the home page -->
+    <section class="md:mt-28 lg:mt-36"> 
+        <div class="wrapper">
+            <h1 class="relative text-7xl lg:text-8xl" data-text="Hello!" id="h1">Hello!</h1>
+            <div class="my-2" id="line"></div>
+            <p class="relative mt-6 lg:mt-8 text-3xl w-4/5 md:w-2/5" id="desc"></p>
+        </div>
+    </section>
+
+    <!-- This is the SVG image -->
+    <img class="w-3/5 right-4" src="./img/home.svg">
+
+    <!-- This is dark/light mode button -->
+    <div class="fixed rounded-full bottom-4 lg:bottom-8 right-8 lg:right-12 cursor-pointer" id="toggle">
+        <i class='bx bxs-moon text-3xl lg:text-5xl p-2 text-yellow-300' id="mode"></i>
+    </div>
+
+    <!-- This is background -->
+    <div class="background" id="particles-js"></div>
+
+    <script src="./js/home.js"></script>
+    <script src="./js/loadBackground.js"></script>
+    <script src="./js/darkMode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // particles.js
+        // Execute particle.js
+        particlesJS.load('particles-js', getPath());
+
+        // Detect if there's any changes inside local storage'
+        window.addEventListener("storage", () => {
+            particlesJS.load('particles-js', getPath());
+        })
+
+        // This is jQuery document
+        // Check if document is loaded
+        $(document).ready(() => {
+            setLeftMargin();
+        })
+
+        // Typing content
+        // Define content inside variable to type
+        const content = "I'm Bryan, an ordinary student who likes to code";
+        // Define and insert content inside span
+        let element = '<span>' + content.split('').join('</span><span>') + '</span>';
+        // Append each char inside span in element into the p element in HTML with typing animation
+        $(element).hide().appendTo('p').each(function (i) {
+            $(this).delay(40 * i).css({
+                display: 'inline',
+                opacity: 0
+            }).animate({
+                opacity: 1,
+            }, 100);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* This is body design configuration */
+.body{
+    position: relative;
+    background-color: var(--background);
+}
+
+/* This is section design configuration*/
+section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+}
+
+.wrapper {
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-bottom: 12%;
+}
+
+/* This is h1 design configuration "Contact" */
+h1 {
+    display: inline-block;
+    border-left: .5rem solid var(--background-h1);
+    position: relative;
+    padding-right: .8rem;
+    white-space: nowrap;
+    animation: showBar_alt 2s linear;
+}
+
+h1::before {
+    position: absolute;
+    content: attr(data-text);
+    color: var(--primary-color);
+    padding-right: .8rem;
+    background-color: var(--background-h1);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: cursorBlocking 1s linear;
+}
+
+/* This is line design configuration "--------" */
+#line {
+    display: block;
+    background-color: var(--color-line);
+    height: .35rem;
+    width: calc(.8rem + .7rem + 4.5rem * 2);
+    animation: renderLine_alt 2s linear;
+}
+
+/* This is desc design configuration "You can find me " */
+p  {
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/* This is pointer design configuration "|" */
+.pointer {
+    margin-top: .4rem;
+    height: 3.8vh;
+    border-right: .23rem solid;
+    display: inline;
+    animation: cursorBlink 1.5s step-end infinite;
+}
+
+/* This is social media bar design configuration */
+#socialMedia {
+    padding: .5rem;
+    flex-wrap: wrap;
+    gap : .5rem;
+    visibility: hidden;
+}
+
+#socialMedia #container {
+    flex: 1;
+    display: grid;
+}
+
+#socialMedia #container a {
+    cursor: default;
+}
+
+#socialMedia #container a i {
+    margin: auto;
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+#socialMedia #container a i:hover {
+    animation: pulse 2.5s infinite;
+}
+
+#socialMedia #container span {
+    transition: .4s;
+    justify-self: center;
+    align-self: center; 
+    pointer-events: none;
+    opacity: 0;
+}
+
+#socialMedia #container .active {
+    opacity: 1;
+    overflow: hidden;
+    text-align: center;
+    animation: cursorBlocking 1s linear;
+}
+
+/* This is toggle design configuration */
+#toggle {
+    background-color: var(--background-nav);
+}

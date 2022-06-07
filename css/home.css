@@ -1,0 +1,95 @@
+/* This is body design configuration */
+.body{
+    position: relative;
+    background-color: var(--background);
+}
+
+/* This is section design configuration*/
+.wrapper {
+    padding-left: 10%;
+}
+
+/* This is h1 design configuration "Hello!" */
+h1 {
+    display: inline-block;
+    border-left: .8rem solid var(--background-h1);
+    position: relative;
+    padding-right: 1rem;
+    white-space: nowrap;
+    animation: showBar 2s linear;
+}
+
+h1::before {
+    position: absolute;
+    content: attr(data-text);
+    color: var(--primary-color);
+    padding-right: 1rem;
+    background-color: var(--background-h1);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: cursorBlocking 1s linear;
+}
+
+/* This is line design configuration "--------" */
+#line {
+    display: block;
+    background-color: var(--color-line);
+    height: .5rem;
+    width: calc(.8rem + .7rem + 4.5rem * 3);
+    animation: renderLine 2s linear;
+}
+
+/* This is desc design configuration "I'm Bryan ..." */
+p {
+    background-color: rgba(255, 255, 255, .8);
+    font-weight: 500;
+    padding-left: 1rem;
+    animation: renderDesc 1s linear;
+}
+
+/* This is image configauration */
+img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* This is toggle design configuration */
+#toggle {
+    background-color: var(--background-nav);
+}
+
+/* This is media query */
+@media (max-width: 240px) {
+    img {
+        opacity: 0;
+    }
+}
+
+/* This is md in Tailwind CSs */
+@media (max-width: 768px) {
+    section {
+        position: relative;
+        top: 30%;
+        transform: translateY(-30%);
+    }
+
+    img {
+        top: 70%;
+        transform: translate(-20%, -70%);
+    }
+}
+
+/* This is lg in Tailwind CSs */
+@media (min-width: 1024px) {
+    #line {
+        width: calc(.8rem + .7rem + 6rem * 3.5);
+        animation: renderLine_1024px 2s linear;
+    }
+
+    p {
+        animation: renderDesc_1024px 1s linear;
+    }
+}

@@ -1,0 +1,150 @@
+/* This is body design configuration */
+.body{
+    position: relative;
+    background-color: var(--background);
+}
+
+/* This is section design configuration*/
+section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+}
+
+.wrapper {
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-bottom: 12%;
+}
+
+/* This is h1 design configuration "Info" */
+#headline {
+    display: inline-block;
+    border-left: .5rem solid var(--background-h1);
+    position: relative;
+    padding-right: .8rem;
+    white-space: nowrap;
+    animation: showBar_alt 2s linear;
+}
+
+#headline::before {
+    position: absolute;
+    content: attr(data-text);
+    color: var(--primary-color);
+    padding-right: .8rem;
+    background-color: var(--background-h1);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: cursorBlocking 1s linear;
+}
+
+/* This is line design configuration "--------" */
+#line {
+    display: block;
+    background-color: var(--color-line);
+    height: .35rem;
+    width: calc(.8rem + .7rem + 4.5rem * 3);
+    animation: renderLine_alt_0 2s linear;
+}
+
+/* This is desc design configuration "This is a website ... " */
+p, #video, .components {
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/* This is youtube video design configuration */
+#video {    
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .4s;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    visibility: hidden;
+}
+
+/* This is desc design configuration "If you are curious ...", "If you are searching ..." */
+#content0, #content1 {
+    opacity: 0;
+}
+
+/* This is components design configuration */
+.components {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: .5rem;
+    visibility: hidden;
+}
+
+.components ul {
+    flex: 1;
+}
+
+.components ul h1 {
+    margin-bottom: .5rem;
+}
+
+.components ul li {
+    display: flex;
+    padding-bottom: .5rem;
+}
+
+.components ul li i {
+    -webkit-text-stroke: .5px black;
+}
+
+.components ul li a {
+    display: grid;
+    margin-left: .5rem;
+}
+
+.components ul li a:hover {
+    text-decoration-line: underline;
+}
+
+.components ul li a span {
+    margin: auto;
+}
+
+/* This is pointer design configuration "|" */
+.pointer {
+    margin-top: .4rem;
+    height: 3.8vh;
+    border-right: .23rem solid;
+    display: inline;
+    animation: cursorBlink 1.5s step-end infinite;
+}
+
+/* This is Github Card design configuration */
+#ghcard-bryanfks-dev-1 {
+    margin-top: .75rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 91.666667%;
+    height: 12rem;
+    visibility: hidden;
+}
+    /* This is md in Tailwind CSS */
+@media (min-width: 768px) {
+    #ghcard-bryanfks-dev-1 {
+        width: 75%;
+        height: 16rem;
+    }
+}
+
+    /* This is lg in Tailwind CSS */
+@media (min-width: 1024px) { 
+    #ghcard-bryanfks-dev-1 {
+        width: 58.333333%;
+        height: 18rem;
+    }
+}
+
+/* This is toggle design configuration */
+#toggle {
+    background-color: var(--background-nav);
+}

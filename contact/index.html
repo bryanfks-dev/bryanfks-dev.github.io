@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/icon.ico">
+    <title>Personal Website | Contact</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/navBar.css">
+    <link rel="stylesheet" href="../css/scrollBar.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/darkMode.css">
+    <link rel="stylesheet" href="../css/animation.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="body" id="body">
+    <!-- This is the navigation bar of the page -->
+    <nav class="fixed h-full">
+        <ul class="navBarItem mx-3" id="icon">
+            <li class="relative mb-9" id="home">
+                <a href="../">
+                    <i class='bx bxs-home text-4xl sm:text-5xl lg:text-6xl text-inherit cursor-pointer'></i>
+                </a>
+                <span class="toolTip">Home</span>
+            </li>
+            <li class="relative mb-9" id="aboutme">
+                <a href="../aboutme/">
+                    <i class='bx bxs-face text-4xl sm:text-5xl lg:text-6xl cursor-pointer'></i>
+                </a>
+                <span class="toolTip">About Me</span>
+            </li>
+            <li class="relative mb-9" id="contact">
+                <a href="">
+                    <i class='bx bxs-contact text-4xl sm:text-5xl lg:text-6xl cursor-pointer'></i>
+                </a>
+                <span class="toolTip">Contact</span>
+            <li class="relative" id="info">
+                <a href="../info/">
+                    <i class='bx bx-window-alt text-4xl sm:text-5xl lg:text-6xl cursor-pointer'></i>
+                </a>
+                <span class="toolTip">Info</span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- This is the text contents of the contact page -->
+    <section> 
+        <div class="wrapper">
+            <h1 class="relative text-2xl lg:text-3xl" data-text="Contact">Contact</h1>
+            <div class="my-2" id="line"></div>
+            <p class="relative mt-6 lg:mt-8 text-xl lg:text-2xl text-justify" id="content"></p>
+            <div class="mt-5 flex" id="socialMedia">
+                <div class="relative block" id="container">
+                    <a class="grid" href="https://www.instagram.com/bry.fernando/" target="_blank" rel="noopener noreferrer" id="instagram">
+                        <i class='bx bxl-instagram-alt text-pink-600 text-5xl' onmouseenter="modifyElement(this)" onmouseleave="removeModify(this)"></i>
+                    </a>
+                    <span class="text-sm text-pink-600 text-sm lg:text-lg">
+                        Instagram
+                        <div class="pointer"></div>
+                    </span>
+                </div>
+                <div class="relative block" id="container">
+                    <a class="grid" href="https://www.facebook.com/BryanFernandoKS/" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-facebook-circle text-blue-700 text-5xl' onmouseenter="modifyElement(this)" onmouseleave="removeModify(this)"></i>
+                    </a>
+                    <span class="text-sm text-blue-700 text-sm lg:text-lg z-100">
+                        Facebook
+                        <div class="pointer"></div>
+                    </span>
+                </div>
+                <div class="relative block" id="container">
+                    <a class="grid z-10" href="https://twitter.com/bryfks/" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-twitter text-sky-500 text-5xl' onmouseenter="modifyElement(this)" onmouseleave="removeModify(this)"></i>
+                    </a>
+                    <span class="text-sm text-sky-500 text-sm lg:text-lg">
+                        Twitter
+                        <div class="pointer"></div>
+                    </span>
+                </div>
+                <div class="relative block" id="container">
+                    <a class="grid" href="https://mail.google.com/mail/u/0/?fs=1&to=bryanfernandoks11@gmail.com&tf=cm&su=Feedback" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-gmail text-red-700 text-5xl' onmouseenter="modifyElement(this)" onmouseleave="removeModify(this)"></i>
+                    </a>
+                    <span class="text-sm text-red-700 text-sm lg:text-lg">
+                        Gmail
+                        <div class="pointer"></div>
+                    </span>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <!-- This is dark/light mode button -->
+    <div class="fixed rounded-full bottom-4 lg:bottom-8 right-8 lg:right-12 cursor-pointer" id="toggle">
+        <i class='bx bxs-moon text-3xl lg:text-5xl p-2 text-yellow-300' id="mode"></i>
+    </div>
+
+    <!-- This is background -->
+    <div class="background" id="particles-js"></div>
+
+    <script src="../js/contact.js"></script>
+    <script src="../js/loadBackground.js"></script>
+    <script src="../js/darkMode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // particles.js
+        // Execute particle.js
+        particlesJS.load('particles-js', "." + getPath());
+
+        // Detect if there's any changes inside local storage'
+        window.addEventListener("storage", () => {
+            particlesJS.load('particles-js', "." + getPath());
+        })
+
+        // This is jquery document
+        // Check if document is loaded
+        $(document).ready(() => {
+            // Set left margin to main section
+            setLeftMargin();
+            // Start typing animation
+            typeWritter();
+        })
+    </script>
+</body>
+</html>
