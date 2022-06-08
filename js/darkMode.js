@@ -94,9 +94,3 @@ toggle.addEventListener("click", () => {
         disableDarkMode();
     }
 });
-
-// Event listener for session storage
-window.addEventListener("beforeunload", () => {
-    // Remove 'mode' from session storage
-    localStorage.removeItem('dark');
-});
