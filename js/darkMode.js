@@ -98,5 +98,5 @@ toggle.addEventListener("click", () => {
 // Event listener for session storage
 window.addEventListener("beforeunload", () => {
     // Remove 'mode' from session storage
-    sessionStorage.removeItem('mode');
+    localStorage.removeItem('mode');
 });
