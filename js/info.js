@@ -23,7 +23,7 @@ const decelaration = 20;
 
 // Set contents
 const content = "This is a website that I created and developed myself. This website is full of descriptions about me, but (maybe) in the future I will add other things too. This website is the upgraded version of my old website. At first, I have never thought about making this website, but in the 12th grade, there was an English assignment where I should make a S.M.A.R.T goal, so at that time I decided to make this website (somehow). You can watch how I made the original website down below.";
-const content0 = "If you are curious about how to make a website or your website, there are plenty of tutorials about website development that you can find online (Google, Youtube, Sololearn, Code Academy, etc.). Anyways, this website was made with these components.";
+const content0 = "If you are curious about how to make a website, there are plenty of tutorials about website development that you can find online (Google, Youtube, Sololearn, Code Academy, etc.). Anyways, this website was made with these components.";
 const content1 = "If you are searching for a reference for your website, you can check my HTML, CSS, and Javascript code from my Github respository embed below. Keep in mind this is ONLY for a REFERENCE, don't copy these entirely, because you can develop it further than I did.";
 
 // Define typing function
